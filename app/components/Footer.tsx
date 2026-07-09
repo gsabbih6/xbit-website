@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const QUICK_LINKS = [
   { href: '/', label: 'Home' },
@@ -25,30 +26,13 @@ export default function Footer() {
           {/* Company info — spans 5 cols */}
           <div className="md:col-span-5 lg:col-span-5">
             <Link href="/" className="inline-flex items-center gap-2.5 mb-5">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 28 28"
-                fill="none"
-                aria-hidden="true"
-                className="text-brand-primary"
-              >
-                <path
-                  d="M4 4L12.5 14L4 24"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M24 4L15.5 14L24 24"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <circle cx="14" cy="14" r="2" fill="currentColor" />
-              </svg>
+              <Image
+                src="/xbitinnovations-logo.png"
+                alt="Xbit Innovations Logo"
+                width={24}
+                height={24}
+                className="w-6 h-6 object-contain"
+              />
               <div className="flex items-baseline gap-0.5">
                 <span className="font-display font-bold text-[oklch(92%_0.01_230)]">
                   Xbit

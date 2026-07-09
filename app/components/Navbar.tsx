@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 
 const NAV_LINKS = [
   { href: '/', label: 'Home' },
@@ -53,31 +54,13 @@ export default function Navbar() {
         <div className="w-full max-w-7xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 shrink-0">
-            {/* Abstract X mark SVG */}
-            <svg
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-              fill="none"
-              aria-hidden="true"
-              className="text-brand-primary"
-            >
-              <path
-                d="M4 4L12.5 14L4 24"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M24 4L15.5 14L24 24"
-                stroke="currentColor"
-                strokeWidth="2.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <circle cx="14" cy="14" r="2" fill="currentColor" />
-            </svg>
+            <Image
+              src="/xbitinnovations-logo.png"
+              alt="Xbit Innovations Logo"
+              width={32}
+              height={32}
+              className="w-8 h-8 object-contain"
+            />
             <div className="flex items-baseline gap-0.5">
               <span className="font-display font-bold text-[oklch(92%_0.01_230)]">
                 Xbit
