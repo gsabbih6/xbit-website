@@ -102,11 +102,14 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
         {/* Hero Image Showcase */}
         {product.image && (
-          <section className="border-b border-[oklch(20%_0.01_230)] bg-brand-dark/20 relative py-16 px-6">
-            <div className="max-w-7xl mx-auto flex justify-center">
+          <section className="border-b border-[oklch(20%_0.01_230)] bg-brand-dark/30 relative py-20 px-6">
+            {/* Ambient background glow behind the mockup to pop it out of the black background */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand-primary/5 rounded-full blur-[120px] pointer-events-none" />
+
+            <div className="max-w-7xl mx-auto flex justify-center relative z-10">
               {product.badge.includes('App') || product.badge.includes('iOS') ? (
-                /* Mobile App Phone Frame Mockup */
-                <div className="relative w-full max-w-[300px] aspect-[9/16] overflow-hidden border border-white/10 bg-brand-dark-surface shadow-2xl rounded-[32px] p-2 ring-1 ring-white/5">
+                /* Mobile App Phone Frame Mockup with glow shadow */
+                <div className="relative w-full max-w-[300px] aspect-[9/16] overflow-hidden border border-brand-primary/20 bg-brand-dark-surface shadow-[0_0_50px_rgba(0,242,254,0.12)] rounded-[32px] p-2 ring-1 ring-white/5 transition-all duration-500 hover:shadow-[0_0_60px_rgba(0,242,254,0.18)]">
                   <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-32 h-4 bg-black rounded-full z-20 flex items-center justify-center">
                     <span className="w-2 h-2 rounded-full bg-neutral-900" />
                   </div>
@@ -122,16 +125,16 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
                   </div>
                 </div>
               ) : (
-                /* Web/Desktop Browser Window Mockup */
-                <div className="w-full max-w-5xl border border-[oklch(20%_0.01_230)] bg-brand-dark-surface shadow-2xl">
+                /* Web/Desktop Browser Window Mockup with glow shadow */
+                <div className="w-full max-w-5xl border border-brand-primary/25 bg-brand-dark-surface shadow-[0_0_60px_rgba(0,242,254,0.08)] transition-all duration-500 hover:shadow-[0_0_70px_rgba(0,242,254,0.12)]">
                   {/* Browser Header Bar */}
                   <div className="flex items-center justify-between border-b border-[oklch(20%_0.01_230)] px-4 py-3 bg-[#0a0a0c]">
                     <div className="flex items-center gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full bg-white/10" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-brand-primary/30" />
                       <span className="w-2.5 h-2.5 rounded-full bg-white/10" />
                       <span className="w-2.5 h-2.5 rounded-full bg-white/10" />
                     </div>
-                    <div className="text-[10px] font-mono text-[oklch(40%_0.01_230)] px-8 py-0.5 bg-brand-dark border border-white/5 rounded max-w-xs truncate">
+                    <div className="text-[10px] font-mono text-brand-primary/80 px-8 py-0.5 bg-brand-dark border border-brand-primary/10 rounded max-w-xs truncate">
                       {product.slug === 'xrpay' ? 'xrpay.it/dashboard' : 'molsim.xbit.net/workspace'}
                     </div>
                     <div className="w-12" /> {/* spacer */}
