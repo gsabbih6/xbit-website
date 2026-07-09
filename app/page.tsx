@@ -9,36 +9,36 @@ import Footer from '@/app/components/Footer';
 
 const PRODUCTS = [
   {
+    slug: 'xrpay',
     name: 'XRPay',
     tagline: 'Non-custodial commerce platform',
     badge: 'Flagship',
     image: '/products/xrpay-dashboard.png',
     gridClass: 'md:col-span-2 aspect-[16/10]',
-    href: 'https://xrpay.it',
   },
   {
+    slug: 'xrpay-cash',
     name: 'XRPay Cash',
     tagline: 'Crypto-to-bank mobile app',
     badge: 'iOS App',
     image: '/products/xrpay-cash-app.png',
     gridClass: 'md:col-span-1 aspect-[9/16] md:aspect-auto',
-    href: 'https://apps.apple.com/us/app/xrpay-it/id6777407162',
   },
   {
+    slug: 'meshada',
     name: 'Meshada',
     tagline: 'AI-powered style discovery',
     badge: 'Mobile App',
     image: '/products/meshada-app.jpg',
     gridClass: 'md:col-span-1 aspect-[9/16] md:aspect-auto',
-    href: '/contact',
   },
   {
+    slug: 'molsim',
     name: 'MolSim',
     tagline: 'Molecular simulation platform',
     badge: 'Research',
     image: '/products/molsim-dashboard.jpg',
     gridClass: 'md:col-span-2 aspect-[16/10]',
-    href: '/contact',
   },
 ];
 
@@ -72,9 +72,7 @@ export default function Home() {
               {PRODUCTS.map((product) => (
                 <Link
                   key={product.name}
-                  href={product.href}
-                  target={product.href.startsWith('http') ? '_blank' : undefined}
-                  rel={product.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  href={`/products/${product.slug}`}
                   className={`group relative bg-brand-dark-surface border border-[oklch(18%_0.01_230)] rounded-2xl overflow-hidden transition-all duration-400 hover:border-brand-primary/40 min-h-[320px] ${product.gridClass}`}
                 >
                   {/* Full Card Image Background */}

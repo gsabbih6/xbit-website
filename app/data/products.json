@@ -1,0 +1,86 @@
+[
+  {
+    "slug": "xrpay",
+    "name": "XRPay",
+    "tagline": "Non-custodial digital asset payment rails for modern enterprise.",
+    "badge": "Flagship",
+    "image": "/products/xrpay-dashboard.png",
+    "externalUrl": "https://xrpay.it",
+    "ctaText": "Visit XRPay.it",
+    "heroDescription": "A decentralized payment gateway designed to let merchants accept XRP and RLUSD directly from customers, eliminating card networks, reducing transaction costs to fractions of a cent, and settling instantly.",
+    "problem": "Traditional payment processors charge 1.5% to 3.5% per transaction, hold merchant funds for days, and carry massive chargeback fraud risks. Existing custodial crypto processors add middleman fees and require you to trust them with your private keys.",
+    "solution": "XRPay settles payments directly on the XRP Ledger in 3-5 seconds. By operating in a completely non-custodial model, merchant funds bypass intermediaries and route directly to their own secure ledger accounts, with near-zero transaction fees and zero chargeback risks.",
+    "technicalArchitecture": "XRPay utilizes a robust event-driven microservices architecture. It maintains persistent websocket connections to public ripple-d nodes to listen to ledger updates. When a payment intent is created, a unique destination tag is leased. The transaction listener filters incoming transactions for the specified destination tag and payment amount. Once detected, the transaction is validated for cryptographic ledger finality and a webhook payload is securely signed (HMAC-SHA256) and fired to the merchant's API.",
+    "keyFeatures": [
+      "Direct XRP & RLUSD payments without intermediaries",
+      "Instant settlement on the XRP Ledger (3-5 seconds)",
+      "Non-custodial architecture (your keys, your funds)",
+      "Automated destination tag leasing and tracking",
+      "Cryptographically signed webhook notification system"
+    ],
+    "techStack": ["Next.js", "xrpl.js", "Node.js", "Redis", "TypeScript", "Tailwind CSS"]
+  },
+  {
+    "slug": "xrpay-cash",
+    "name": "XRPay Cash",
+    "tagline": "Instant off-ramp from digital wallets to local bank accounts.",
+    "badge": "iOS App",
+    "image": "/products/xrpay-cash-app.png",
+    "externalUrl": "https://apps.apple.com/us/app/xrpay-it/id6777407162",
+    "ctaText": "Get on App Store",
+    "heroDescription": "A mobile application that simplifies off-ramping digital assets directly to local bank accounts in seconds, bringing liquidity and convenience to freelancers, merchants, and remitters.",
+    "problem": "Converting crypto into spendable cash is traditionally a multi-step chore: transferring to a centralized exchange, waiting for order matching, executing a bank transfer, and paying high fees along the way.",
+    "solution": "XRPay Cash acts as a bridge between your non-custodial wallet and your local bank. With a simple, clean, and intuitive interface, you can off-ramp your assets and receive funds in your bank account in a single tap, at competitive rates.",
+    "technicalArchitecture": "The mobile app communicates with a secure REST gateway. It integrates Plaid Link for secure bank account authentication and KYC onboarding. The backend routes the transaction payload to localized liquidity providers. It signs transaction payloads client-side using Secure Enclave cryptography, ensuring that private keys never leave the mobile device. Off-ramping works via SEC-compliant banking API providers (ACH/SEPA rails).",
+    "keyFeatures": [
+      "One-click bank off-ramp with minimal fees",
+      "Secure banking integration via Plaid",
+      "Client-side signing with iOS Secure Enclave",
+      "Real-time exchange rate updates and transparent pricing",
+      "Fully compliant KYC and AML onboarding flow"
+    ],
+    "techStack": ["Swift (iOS)", "SwiftUI", "Node.js", "Plaid API", "PostgreSQL", "Docker"]
+  },
+  {
+    "slug": "meshada",
+    "name": "Meshada",
+    "tagline": "AI-driven style curation and aesthetic discovery.",
+    "badge": "Mobile App",
+    "image": "/products/meshada-app.jpg",
+    "externalUrl": null,
+    "ctaText": "Inquire for Licensing",
+    "heroDescription": "An interactive mobile application that maps personal aesthetic preferences in real-time, matching users with personalized style recommendations using advanced machine learning models.",
+    "problem": "Online apparel shopping is plagued by overwhelming catalogs and search engines that only understand literal text keywords. They cannot comprehend visual style, fit context, or a user's unique visual identity.",
+    "solution": "Meshada changes search from keywords to aesthetics. Through visual swipe-to-rate loops, our system learns your personal style taste dynamically, curating outfits from global retail databases that match your fit and aesthetic profile.",
+    "technicalArchitecture": "Meshada utilizes a dual-model recommendation system. First, a PyTorch-based computer vision model processes apparel imagery, extracting high-dimensional feature vectors representing styles, patterns, cuts, and colors. Second, a collaborative filtering algorithm maps these features against user interaction patterns in a vector database. The app is built with cross-platform frameworks for high-fidelity UI animations.",
+    "keyFeatures": [
+      "Dynamic style swipe feedback loops",
+      "High-dimensional visual feature extraction",
+      "Vector-based recommendation mapping",
+      "Real-time retail inventory synchronization",
+      "Interactive digital wardrobe curation"
+    ],
+    "techStack": ["React Native", "Expo", "Python", "PyTorch", "Pinecone (Vector DB)", "FastAPI"]
+  },
+  {
+    "slug": "molsim",
+    "name": "MolSim",
+    "tagline": "Cloud-native molecular dynamics orchestration dashboard.",
+    "badge": "Research",
+    "image": "/products/molsim-dashboard.jpg",
+    "externalUrl": null,
+    "ctaText": "Request Enterprise Demo",
+    "heroDescription": "A computational research dashboard that abstracts complex cluster setup, letting biotech and materials scientists configure and run high-performance molecular dynamics simulations.",
+    "problem": "Running molecular dynamics (MD) simulations requires managing complex software builds (GROMACS, OpenMM), configuring parameters via command line, and managing compute nodes on HPC clusters. This takes time away from actual scientific research.",
+    "solution": "MolSim provides a clean, visual web interface to design molecular systems, set up force fields, scale cloud compute clusters on demand, and monitor simulations in real-time with WebGL trajectories rendered in-browser.",
+    "technicalArchitecture": "MolSim uses a decoupled control plane. The frontend communicates with a Python coordinator service. When a simulation job is launched, the coordinator calls Slurm/Kubernetes APIs to auto-scale GPU-accelerated cloud nodes. Configuration files (.mdp/.top) are generated programmatically. A sidecar agent monitors GPU temperature, step count, and system energy, streaming real-time statistics via WebSockets. Visualizations use NGL Viewer for interactive WebGL rendering.",
+    "keyFeatures": [
+      "Zero-install web setup for molecular structures",
+      "Dynamic node provisioning for GPU-accelerated clusters",
+      "Integrated NGL Viewer for 3D trajectory rendering",
+      "Real-time telemetry for temperature, steps, and energy",
+      "Automated topology and force field generation"
+    ],
+    "techStack": ["Next.js", "Python", "GROMACS / OpenMM", "Slurm API", "Three.js / WebGL", "PostgreSQL"]
+  }
+]

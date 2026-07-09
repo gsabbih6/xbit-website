@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import industries from './data/industries.json';
+import products from './data/products.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://xbitinnovations.com'
@@ -56,5 +57,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...industryRoutes];
+  const productRoutes: MetadataRoute.Sitemap = products.map((prod) => ({
+    url: `${baseUrl}/products/${prod.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.9,
+  }));
+
+  return [...staticRoutes, ...industryRoutes, ...productRoutes];
 }
