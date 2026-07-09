@@ -102,18 +102,53 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
 
         {/* Hero Image Showcase */}
         {product.image && (
-          <section className="border-b border-[oklch(20%_0.01_230)] bg-brand-dark relative py-12 px-6">
-            <div className="max-w-7xl mx-auto">
-              <div className="relative aspect-[16/10] md:aspect-[21/9] w-full overflow-hidden border border-[oklch(20%_0.01_230)] bg-brand-dark-surface shadow-2xl">
-                <Image 
-                  src={product.image} 
-                  alt={`${product.name} interface`}
-                  fill
-                  sizes="(max-width: 1200px) 100vw, 1200px"
-                  className="object-cover opacity-90 transition-transform duration-700 hover:scale-[1.01]"
-                  priority
-                />
-              </div>
+          <section className="border-b border-[oklch(20%_0.01_230)] bg-brand-dark/20 relative py-16 px-6">
+            <div className="max-w-7xl mx-auto flex justify-center">
+              {product.badge.includes('App') || product.badge.includes('iOS') ? (
+                /* Mobile App Phone Frame Mockup */
+                <div className="relative w-full max-w-[300px] aspect-[9/16] overflow-hidden border border-white/10 bg-brand-dark-surface shadow-2xl rounded-[32px] p-2 ring-1 ring-white/5">
+                  <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-32 h-4 bg-black rounded-full z-20 flex items-center justify-center">
+                    <span className="w-2 h-2 rounded-full bg-neutral-900" />
+                  </div>
+                  <div className="relative w-full h-full rounded-[24px] overflow-hidden">
+                    <Image 
+                      src={product.image} 
+                      alt={`${product.name} interface`}
+                      fill
+                      sizes="300px"
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                </div>
+              ) : (
+                /* Web/Desktop Browser Window Mockup */
+                <div className="w-full max-w-5xl border border-[oklch(20%_0.01_230)] bg-brand-dark-surface shadow-2xl">
+                  {/* Browser Header Bar */}
+                  <div className="flex items-center justify-between border-b border-[oklch(20%_0.01_230)] px-4 py-3 bg-[#0a0a0c]">
+                    <div className="flex items-center gap-1.5">
+                      <span className="w-2.5 h-2.5 rounded-full bg-white/10" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-white/10" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-white/10" />
+                    </div>
+                    <div className="text-[10px] font-mono text-[oklch(40%_0.01_230)] px-8 py-0.5 bg-brand-dark border border-white/5 rounded max-w-xs truncate">
+                      {product.slug === 'xrpay' ? 'xrpay.it/dashboard' : 'molsim.xbit.net/workspace'}
+                    </div>
+                    <div className="w-12" /> {/* spacer */}
+                  </div>
+                  {/* Dashboard Screenshot */}
+                  <div className="relative aspect-[16/10] w-full overflow-hidden bg-brand-dark">
+                    <Image 
+                      src={product.image} 
+                      alt={`${product.name} interface`}
+                      fill
+                      sizes="(max-width: 1200px) 100vw, 1200px"
+                      className="object-cover opacity-90 transition-transform duration-700 hover:scale-[1.01]"
+                      priority
+                    />
+                  </div>
+                </div>
+              )}
             </div>
           </section>
         )}
