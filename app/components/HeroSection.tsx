@@ -2,10 +2,36 @@
 
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
+import { useState, useRef } from 'react';
 
 export default function HeroSection() {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (sectionRef.current) {
+      const rect = sectionRef.current.getBoundingClientRect();
+      setMousePos({
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top,
+      });
+    }
+  };
+
   return (
-    <section className="relative min-h-[100dvh] flex items-center overflow-hidden bg-brand-dark bg-tech-grid border-b border-[oklch(20%_0.01_230)]">
+    <section 
+      ref={sectionRef}
+      onMouseMove={handleMouseMove}
+      className="relative min-h-[100dvh] flex items-center overflow-hidden bg-brand-dark bg-tech-grid border-b border-[oklch(20%_0.01_230)]"
+    >
+      {/* Dynamic mouse-following spotlight glow */}
+      <div 
+        className="pointer-events-none absolute inset-0 transition-opacity duration-300 opacity-40"
+        style={{
+          background: `radial-gradient(500px circle at ${mousePos.x}px ${mousePos.y}px, rgba(0, 242, 254, 0.08), transparent 80%)`,
+        }}
+      />
+
       {/* Decorative technical elements */}
       <div className="absolute top-24 left-6 md:left-12 font-mono text-[10px] text-[oklch(40%_0.01_230)] tracking-widest hidden md:block">
         SYS.INIT // v2.4.0 <br />
