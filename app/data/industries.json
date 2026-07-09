@@ -1,0 +1,137 @@
+[
+  {
+    "slug": "pharmaceuticals",
+    "industryName": "Pharmaceuticals & Biotech",
+    "heroTitle": "Accelerate Drug Discovery with AI",
+    "heroDescription": "Leverage our MolSim platform and custom AI to streamline computational chemistry and high-throughput screening.",
+    "challenges": ["Slow lead optimization", "High computational costs", "Fragmented simulation workflows"],
+    "xbitSolution": "MolSim provides automated pipelines for enzyme engineering and virtual screening, reducing time-to-insight.",
+    "relevantProduct": "MolSim"
+  },
+  {
+    "slug": "fintech",
+    "industryName": "Fintech & E-Commerce",
+    "heroTitle": "Next-Generation Payments for Fintech",
+    "heroDescription": "Integrate XRPay for seamless, borderless cryptocurrency transactions with instant settlement.",
+    "challenges": ["High transaction fees", "Slow cross-border payments", "Complex crypto integration"],
+    "xbitSolution": "XRPay offers a plug-and-play API to accept crypto payments with zero volatility risk.",
+    "relevantProduct": "XRPay"
+  },
+  {
+    "slug": "materials-science",
+    "industryName": "Materials Science",
+    "heroTitle": "Predictive Materials Engineering",
+    "heroDescription": "Utilize advanced machine learning interatomic potentials to design new alloys and composites with precision.",
+    "challenges": ["Expensive physical prototyping", "Difficult material characterization", "Unpredictable interface properties"],
+    "xbitSolution": "MolSim simulates interface properties (like WC-Co) at DFT accuracy, saving months of lab testing.",
+    "relevantProduct": "MolSim"
+  },
+  {
+    "slug": "healthcare",
+    "industryName": "Healthcare & MedTech",
+    "heroTitle": "Custom AI Solutions for Modern Healthcare",
+    "heroDescription": "We build secure, compliant AI systems for medical image analysis, patient data processing, and predictive diagnostics.",
+    "challenges": ["Strict compliance requirements", "Data siloing", "Slow diagnostic processes"],
+    "xbitSolution": "Our custom AI solutions integrate directly into your infrastructure to automate diagnostics and streamline patient data.",
+    "relevantProduct": "Custom AI Services"
+  },
+  {
+    "slug": "logistics",
+    "industryName": "Logistics & Supply Chain",
+    "heroTitle": "Optimize the Global Supply Chain",
+    "heroDescription": "Implement AI-driven predictive analytics and automation to eliminate bottlenecks and reduce operational costs.",
+    "challenges": ["Unpredictable supply fluctuations", "Inefficient routing", "Siloed tracking data"],
+    "xbitSolution": "Custom logistics platforms that unify tracking data, predict delays using machine learning, and optimize routes in real time.",
+    "relevantProduct": "Custom Software Engineering"
+  },
+  {
+    "slug": "manufacturing",
+    "industryName": "Manufacturing",
+    "heroTitle": "Smart Manufacturing & Industry 4.0",
+    "heroDescription": "Bring modern IoT integration and machine learning fault-detection to your factory floor.",
+    "challenges": ["Unexpected downtime", "Legacy machinery integration", "Quality control consistency"],
+    "xbitSolution": "We implement edge-computing computer vision and predictive maintenance systems that alert engineers before critical failures occur.",
+    "relevantProduct": "Custom AI Services"
+  },
+  {
+    "slug": "real-estate",
+    "industryName": "Real Estate & PropTech",
+    "heroTitle": "Digital Transformation for PropTech",
+    "heroDescription": "Build high-conversion property platforms and internal tools for real estate management and valuation.",
+    "challenges": ["Manual property valuation", "Fragmented tenant management", "Inefficient leasing workflows"],
+    "xbitSolution": "Custom portals and predictive pricing algorithms that allow firms to value property instantly and manage portfolios seamlessly.",
+    "relevantProduct": "Custom Software Engineering"
+  },
+  {
+    "slug": "education",
+    "industryName": "EdTech & E-Learning",
+    "heroTitle": "Scale Education with Custom Software",
+    "heroDescription": "Deliver personalized learning experiences and robust administration platforms for the digital classroom.",
+    "challenges": ["Low student engagement", "Scalability of video platforms", "Fragmented grading systems"],
+    "xbitSolution": "Bespoke LMS platforms with AI-driven personalized curriculum tracks and real-time analytics for educators.",
+    "relevantProduct": "Custom Software Engineering"
+  },
+  {
+    "slug": "energy",
+    "industryName": "Energy & Utilities",
+    "heroTitle": "Data-Driven Energy Management",
+    "heroDescription": "Modernize the grid with predictive load balancing and advanced data visualization platforms.",
+    "challenges": ["Fluctuating grid demands", "Aging software infrastructure", "Regulatory reporting compliance"],
+    "xbitSolution": "High-performance data pipelines and dashboards that provide real-time visibility into grid health and automated compliance reporting.",
+    "relevantProduct": "Custom Software Engineering"
+  },
+  {
+    "slug": "retail",
+    "industryName": "Retail & Consumer Goods",
+    "heroTitle": "Omnichannel Retail Automation",
+    "heroDescription": "Bridge the gap between physical and digital retail with custom inventory management and personalized storefronts.",
+    "challenges": ["Inventory syncing delays", "Low conversion rates", "High customer acquisition cost"],
+    "xbitSolution": "Headless commerce architecture and AI recommendation engines that boost conversion and perfectly sync warehouse data.",
+    "relevantProduct": "Custom Software Engineering"
+  },
+  {
+    "slug": "agritech",
+    "industryName": "Agriculture & AgriTech",
+    "heroTitle": "Precision Agriculture Software",
+    "heroDescription": "Turn farm data into actionable insights with custom crop-yield prediction models and drone-data processing.",
+    "challenges": ["Unpredictable weather patterns", "Inefficient resource allocation", "Large-scale data processing"],
+    "xbitSolution": "We build cloud-native platforms that ingest massive amounts of sensor data to recommend precise watering and harvesting schedules.",
+    "relevantProduct": "Custom AI Services"
+  },
+  {
+    "slug": "legal",
+    "industryName": "LegalTech",
+    "heroTitle": "Automate Legal Workflows",
+    "heroDescription": "Streamline discovery and contract review with secure, domain-specific NLP tools.",
+    "challenges": ["High volume of document review", "Strict data security needs", "Inefficient case management"],
+    "xbitSolution": "Private, securely hosted Large Language Models (LLMs) trained to parse and highlight anomalies in legal contracts instantly.",
+    "relevantProduct": "Custom AI Services"
+  },
+  {
+    "slug": "insurance",
+    "industryName": "Insurance & InsurTech",
+    "heroTitle": "Modernize Risk & Claims Processing",
+    "heroDescription": "Accelerate claims processing and improve risk assessment with custom machine learning pipelines.",
+    "challenges": ["Fraud detection accuracy", "Manual claims processing", "Legacy underwriting systems"],
+    "xbitSolution": "Computer vision models for instant damage assessment and predictive algorithms that flag high-risk anomalies automatically.",
+    "relevantProduct": "Custom AI Services"
+  },
+  {
+    "slug": "telecommunications",
+    "industryName": "Telecommunications",
+    "heroTitle": "Next-Gen Telco Infrastructure",
+    "heroDescription": "Build robust, scalable software to manage network operations and customer billing at scale.",
+    "challenges": ["High customer churn", "Network outage detection", "Complex billing structures"],
+    "xbitSolution": "Predictive churn models and highly available microservices architectures that ensure 99.99% uptime for critical billing systems.",
+    "relevantProduct": "Custom Software Engineering"
+  },
+  {
+    "slug": "aerospace",
+    "industryName": "Aerospace & Defense",
+    "heroTitle": "Mission-Critical Software Systems",
+    "heroDescription": "Develop secure, high-performance software for aerospace manufacturing, logistics, and simulation.",
+    "challenges": ["Zero-tolerance for software failure", "Extreme security requirements", "Complex supply chain logistics"],
+    "xbitSolution": "Formally verified software components and highly secure, air-gapped deployment strategies for defense-grade applications.",
+    "relevantProduct": "Custom Software Engineering"
+  }
+]

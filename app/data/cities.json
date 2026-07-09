@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "little-rock",
+    "cityName": "Little Rock",
+    "state": "Arkansas",
+    "region": "Central Arkansas"
+  },
+  {
+    "slug": "fayetteville",
+    "cityName": "Fayetteville",
+    "state": "Arkansas",
+    "region": "Northwest Arkansas"
+  },
+  {
+    "slug": "bentonville",
+    "cityName": "Bentonville",
+    "state": "Arkansas",
+    "region": "Northwest Arkansas"
+  },
+  {
+    "slug": "springdale",
+    "cityName": "Springdale",
+    "state": "Arkansas",
+    "region": "Northwest Arkansas"
+  },
+  {
+    "slug": "rogers",
+    "cityName": "Rogers",
+    "state": "Arkansas",
+    "region": "Northwest Arkansas"
+  },
+  {
+    "slug": "conway",
+    "cityName": "Conway",
+    "state": "Arkansas",
+    "region": "Central Arkansas"
+  },
+  {
+    "slug": "jonesboro",
+    "cityName": "Jonesboro",
+    "state": "Arkansas",
+    "region": "Northeast Arkansas"
+  },
+  {
+    "slug": "fort-smith",
+    "cityName": "Fort Smith",
+    "state": "Arkansas",
+    "region": "River Valley"
+  },
+  {
+    "slug": "tulsa",
+    "cityName": "Tulsa",
+    "state": "Oklahoma",
+    "region": "Green Country"
+  },
+  {
+    "slug": "memphis",
+    "cityName": "Memphis",
+    "state": "Tennessee",
+    "region": "Mid-South"
+  }
+]
