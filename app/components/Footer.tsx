@@ -117,7 +117,9 @@ export default function Footer() {
               <li className="flex items-center gap-4 pt-2">
                 {/* LinkedIn */}
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/company/xbit-innovations/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="LinkedIn"
                   className="text-[oklch(50%_0.01_230)] hover:text-brand-primary transition-colors duration-200"
                 >
