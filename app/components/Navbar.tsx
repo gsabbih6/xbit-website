@@ -94,10 +94,10 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <Link
-            href="/contact"
+            href="/#project-fit"
             className="hidden lg:inline-flex items-center bg-brand-primary text-brand-dark font-semibold text-sm h-10 px-6 rounded-lg btn-primary"
           >
-            Get in Touch
+            Get a Build Plan
           </Link>
 
           {/* Mobile hamburger */}
@@ -154,12 +154,12 @@ export default function Navbar() {
               );
             })}
             <Link
-              href="/contact"
+              href="/#project-fit"
               onClick={() => setMobileOpen(false)}
               className="animate-menu-item mt-8 inline-flex items-center justify-center bg-brand-primary text-brand-dark font-semibold h-12 px-8 rounded-lg btn-primary self-start"
               style={{ '--i': NAV_LINKS.length } as React.CSSProperties}
             >
-              Get in Touch
+              Get a Build Plan
             </Link>
           </nav>
         </div>

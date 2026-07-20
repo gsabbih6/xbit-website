@@ -48,6 +48,7 @@ export default function ContactForm() {
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   // Scroll to top of form when step changes on mobile
   useEffect(() => {
@@ -62,6 +63,7 @@ export default function ContactForm() {
 
   function update(field: keyof FormData, value: string) {
     setForm((prev) => ({ ...prev, [field]: value }));
+    setSubmitError('');
     if (errors[field]) {
       setErrors((prev) => ({ ...prev, [field]: undefined }));
     }
@@ -110,33 +112,40 @@ export default function ContactForm() {
     if (!validateStep(3)) return;
 
     setIsSubmitting(true);
+    setSubmitError('');
     
-    const webhookUrl = process.env.NEXT_PUBLIC_GOOGLE_SHEET_URL;
-    
-    if (webhookUrl) {
-      try {
-        const response = await fetch(webhookUrl, {
-          method: 'POST',
-          mode: 'no-cors', // Google Apps Script Web App redirects need no-cors for simple fetch
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(form),
-        });
-        setIsSubmitting(false);
-        setSubmitted(true);
-      } catch (error) {
-        console.error('Submission failed:', error);
-        setErrors((prev) => ({ ...prev, message: 'There was a network error. Please try again or email us directly.' }));
-        setIsSubmitting(false);
+
+    try {
+      const params = new URLSearchParams(window.location.search);
+      const response = await fetch('/api/leads', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...form,
+          source: 'contact-project-brief',
+          pageUrl: window.location.href,
+          referrer: document.referrer,
+          utmSource: params.get('utm_source') ?? '',
+          utmMedium: params.get('utm_medium') ?? '',
+          utmCampaign: params.get('utm_campaign') ?? '',
+        }),
+      });
+      const result = (await response.json()) as { error?: string };
+
+      if (!response.ok) {
+        throw new Error(result.error || 'We could not send your request.');
       }
-    } else {
-      // Fallback fallback to simulate submission if webhook is not set
-      console.warn('NEXT_PUBLIC_GOOGLE_SHEET_URL is not set. Simulating form submission.');
-      setTimeout(() => {
-        setIsSubmitting(false);
-        setSubmitted(true);
-      }, 1200);
+
+      setSubmitted(true);
+    } catch (error) {
+      console.error('Submission failed:', error);
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : 'There was a network error. Please try again or email us directly.',
+      );
+    } finally {
+      setIsSubmitting(false);
     }
   }
 
@@ -450,6 +459,14 @@ export default function ContactForm() {
               )}
             </button>
           </div>
+          {submitError && (
+            <p className="text-red-300 text-sm mt-5" role="alert">
+              {submitError}{' '}
+              <a href="mailto:info@xbitinnovations.com" className="underline hover:text-white">
+                Email us directly.
+              </a>
+            </p>
+          )}
         </div>
       </form>
     </div>

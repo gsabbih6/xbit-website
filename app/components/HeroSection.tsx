@@ -59,7 +59,7 @@ export default function HeroSection() {
               <span className="block w-4 h-px bg-brand-primary" aria-hidden="true" />
             </div>
             <span className="font-mono text-xs uppercase tracking-[0.2em] text-brand-primary font-semibold">
-              Precision Engineering Studio
+              Consultants who ship
             </span>
           </div>
 
@@ -74,8 +74,8 @@ export default function HeroSection() {
               } as React.CSSProperties
             }
           >
-            We Build Software. <br />
-            <span className="text-[oklch(50%_0.01_230)]">You Build Businesses.</span>
+            Senior engineers for <br />
+            <span className="text-[oklch(50%_0.01_230)]">software that has to work.</span>
           </h1>
 
           {/* Subheadline and CTA Grid */}
@@ -85,21 +85,26 @@ export default function HeroSection() {
           >
             <div className="md:col-span-7">
               <p className="text-lg md:text-xl text-[oklch(75%_0.01_230)] leading-relaxed">
-                Strategic IT consulting paired with precision-crafted custom software. 
-                We partner with high-growth companies to architect systems that scale.
+                We plan, build, and rescue production software for founders and technical teams—without the layers of a traditional agency.
               </p>
             </div>
             
-            <div className="md:col-span-5 flex flex-col items-start md:items-end">
+            <div className="md:col-span-5 flex flex-col items-start md:items-end gap-4">
               <Link
-                href="/contact"
+                href="#project-fit"
                 className="group relative inline-flex items-center justify-center bg-white text-brand-dark font-bold h-14 px-8 text-sm uppercase tracking-wider overflow-hidden transition-all hover:bg-brand-primary"
               >
                 <span className="relative z-10 flex items-center gap-2">
-                  Initialize Project <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  Get a Free Build Plan <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </span>
                 {/* Micro-interaction highlight */}
                 <div className="absolute inset-0 bg-brand-primary transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out" />
+              </Link>
+              <Link
+                href="/contact#calendar"
+                className="text-sm text-[oklch(65%_0.01_230)] hover:text-white transition-colors underline underline-offset-4 decoration-[oklch(35%_0.01_230)]"
+              >
+                Or book a 30-minute call
               </Link>
             </div>
           </div>

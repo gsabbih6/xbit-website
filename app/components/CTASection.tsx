@@ -1,61 +1,65 @@
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { Check } from 'lucide-react';
+import LeadCaptureForm from './LeadCaptureForm';
+
+const DELIVERABLES = [
+  'The smallest useful first release',
+  'A realistic delivery and budget range',
+  'The biggest technical risk to solve first',
+];
 
 export default function CTASection() {
   return (
-    <section className="relative bg-[#050505] py-32 md:py-48 overflow-hidden border-t border-[oklch(20%_0.01_230)]">
-      {/* Background Engineering Pattern */}
-      <div 
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.373 55H0v-1h54V0h.627zM60 55H55v5h-1v-5H0v-1h54V0h1v54h5v1z' fill='%23ffffff' fill-rule='evenodd'/%3E%3C/svg%3E")`
-        }}
-      />
-      
-      {/* Structural Lines */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-full bg-[oklch(20%_0.01_230)] opacity-50" />
-      <div className="absolute top-1/2 -translate-y-1/2 left-0 w-full h-px bg-[oklch(20%_0.01_230)] opacity-50" />
+    <section
+      id="project-fit"
+      className="relative bg-[oklch(7%_0.01_230)] py-24 md:py-36 overflow-hidden border-t border-[oklch(20%_0.01_230)]"
+    >
+      <div className="absolute inset-0 bg-tech-grid opacity-40 pointer-events-none" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div>
-          <div className="flex items-center gap-4 mb-8 font-mono text-xs text-brand-primary uppercase tracking-widest">
-            <span className="block w-2 h-2 bg-brand-primary" />
-            <span>PROJECT_INITIALIZATION</span>
+      <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-20 items-start">
+        <div className="lg:col-span-6 lg:pt-8">
+          <div className="flex items-center gap-4 mb-8 font-mono text-xs text-brand-primary uppercase tracking-[0.18em]">
+            <span className="block w-2 h-2 bg-brand-primary" aria-hidden="true" />
+            <span>Free project triage</span>
           </div>
+
           <h2
-            className="font-display font-bold text-white leading-[1.05] mb-8"
-            style={{ fontSize: 'clamp(3rem, 6vw + 1rem, 5rem)', letterSpacing: '-0.02em' }}
+            className="font-display font-bold text-white leading-[1.02] mb-7"
+            style={{ fontSize: 'clamp(3rem, 5vw + 0.5rem, 5.5rem)', letterSpacing: '-0.025em' }}
           >
-            Ready to Build <br />
-            <span className="text-[oklch(40%_0.01_230)]">Something Real?</span>
+            Know what to build <span className="text-[oklch(48%_0.01_230)]">before you pay to build it.</span>
           </h2>
-          <p className="text-[oklch(60%_0.01_230)] text-xl leading-relaxed max-w-lg mb-10">
-            Stop waiting on bloated agencies. We deploy senior engineering teams that ship production-ready systems in weeks, not months.
+
+          <p className="text-[oklch(68%_0.01_230)] text-lg md:text-xl leading-relaxed max-w-xl mb-10">
+            Send us the rough idea. Within one business day, a technical lead will reply with a practical first-pass build plan.
           </p>
-          
-          <div className="flex flex-wrap items-center gap-6">
-            <Link
-              href="/contact"
-              className="group relative inline-flex items-center justify-center bg-brand-primary text-brand-dark font-bold h-14 px-8 text-sm uppercase tracking-wider overflow-hidden transition-all hover:bg-white"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                Deploy Your Team <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </span>
-            </Link>
+
+          <ul className="space-y-4 max-w-lg">
+            {DELIVERABLES.map((deliverable) => (
+              <li key={deliverable} className="flex items-start gap-3 text-[oklch(82%_0.01_230)]">
+                <span className="mt-0.5 w-5 h-5 border border-brand-primary/50 flex items-center justify-center text-brand-primary shrink-0">
+                  <Check className="w-3 h-3" aria-hidden="true" />
+                </span>
+                <span>{deliverable}</span>
+              </li>
+            ))}
+          </ul>
+
+          <div className="mt-12 pt-6 border-t border-[oklch(20%_0.01_230)] flex flex-wrap gap-x-8 gap-y-3 font-mono text-[11px] uppercase tracking-[0.12em] text-[oklch(48%_0.01_230)]">
+            <span><strong className="text-white font-medium">1 day</strong> response</span>
+            <span><strong className="text-white font-medium">$0</strong> cost</span>
+            <span><strong className="text-white font-medium">No</strong> sales sequence</span>
           </div>
         </div>
 
-        {/* Decorative Data Visual */}
-        <div className="hidden md:flex justify-end opacity-60">
-           <div className="border border-[oklch(20%_0.01_230)] bg-brand-dark p-8 font-mono text-xs text-[oklch(50%_0.01_230)] w-full max-w-md">
-              <div className="mb-4 text-brand-primary border-b border-[oklch(20%_0.01_230)] pb-2">SYSTEM_REQUIREMENTS</div>
-              <ul className="space-y-3">
-                <li className="flex justify-between"><span>ARCHITECTURE</span> <span className="text-white">SCALABLE</span></li>
-                <li className="flex justify-between"><span>SECURITY</span> <span className="text-white">ENTERPRISE</span></li>
-                <li className="flex justify-between"><span>PERFORMANCE</span> <span className="text-white">OPTIMIZED</span></li>
-                <li className="flex justify-between border-t border-[oklch(20%_0.01_230)] pt-3 mt-3"><span>STATUS</span> <span className="text-brand-primary blink">AWAITING_INPUT</span></li>
-              </ul>
-           </div>
+        <div className="lg:col-span-6 bg-brand-dark-surface border border-[oklch(23%_0.015_230)] p-6 sm:p-8 md:p-10">
+          <div className="flex items-center justify-between gap-4 mb-8 pb-5 border-b border-[oklch(22%_0.01_230)]">
+            <div>
+              <p className="font-mono text-[10px] text-brand-primary uppercase tracking-[0.16em] mb-2">Project intake</p>
+              <h3 className="font-display text-2xl font-bold text-white">Get your free build plan</h3>
+            </div>
+            <span className="hidden sm:block font-mono text-[10px] text-[oklch(45%_0.01_230)]">~60 SEC</span>
+          </div>
+          <LeadCaptureForm />
         </div>
       </div>
     </section>

@@ -60,10 +60,10 @@ export default function ContactPage() {
                 fontSize: 'clamp(2.5rem, 5vw + 1rem, 4.5rem)',
               }}
             >
-              Let&apos;s Build Something <span className="text-brand-primary">Real</span>.
+              Get a useful answer, <span className="text-brand-primary">not a sales pitch</span>.
             </h1>
             <p className="text-lg md:text-xl text-[oklch(60%_0.01_230)] max-w-2xl leading-relaxed">
-              Choose your preferred gateway: complete our technical onboarding wizard below to receive a custom proposal, or book a 30-minute discovery call directly into our calendar.
+              Send the project details for a practical first-pass recommendation, or book a 30-minute call with a technical lead.
             </p>
           </div>
         </section>
@@ -81,7 +81,7 @@ export default function ContactPage() {
             </div>
 
             {/* Right Column: Calendly Embed */}
-            <div className="space-y-6">
+            <div id="calendar" className="space-y-6 scroll-mt-28">
               <div className="flex items-center gap-3 mb-6 font-mono text-xs text-brand-primary uppercase tracking-widest">
                 <span>02 // SECURE_CALENDAR_RESERVATION</span>
               </div>
@@ -92,23 +92,23 @@ export default function ContactPage() {
           {/* Technical Status / Contact Details Metadata Bar */}
           <div className="mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 border-t border-[oklch(20%_0.01_230)] pt-12 font-mono text-xs text-[oklch(50%_0.01_230)]">
             <div>
-              <span className="text-brand-primary block mb-2">// DIRECT_EMAIL</span>
+              <span className="text-brand-primary block mb-2">{'// DIRECT_EMAIL'}</span>
               <a href="mailto:info@xbitinnovations.com" className="text-white hover:text-brand-primary transition-colors">
                 info@xbitinnovations.com
               </a>
             </div>
             <div>
-              <span className="text-brand-primary block mb-2">// VOICE_LINE</span>
+              <span className="text-brand-primary block mb-2">{'// VOICE_LINE'}</span>
               <a href="tel:4794129908" className="text-white hover:text-brand-primary transition-colors">
                 (479) 412-9908
               </a>
             </div>
             <div>
-              <span className="text-brand-primary block mb-2">// PHYSICAL_REGION</span>
+              <span className="text-brand-primary block mb-2">{'// PHYSICAL_REGION'}</span>
               <span className="text-white">Arkansas, USA</span>
             </div>
             <div>
-              <span className="text-brand-primary block mb-2">// SERVICE_HOURS</span>
+              <span className="text-brand-primary block mb-2">{'// SERVICE_HOURS'}</span>
               <span className="text-white">Mon–Fri // 08:00–18:00 CST</span>
             </div>
           </div>
