@@ -48,6 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'yearly',
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/privacy`,
+      lastModified: new Date('2026-10-10T00:00:00Z'),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
   ];
 
   const industryRoutes: MetadataRoute.Sitemap = industries.map((ind) => ({

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, type FormEvent, useEffect } from 'react';
+import Link from 'next/link';
 
 const SERVICE_OPTIONS = [
   { id: 'Custom Software Development', icon: '💻', desc: 'End-to-end product engineering' },
@@ -459,6 +460,12 @@ export default function ContactForm() {
               )}
             </button>
           </div>
+          <p className="text-xs text-[oklch(65%_0.01_230)] leading-relaxed mt-5">
+            Learn how we handle your information in our{' '}
+            <Link href="/privacy" className="underline underline-offset-4 hover:text-brand-primary">
+              Privacy Policy
+            </Link>.
+          </p>
           {submitError && (
             <p className="text-red-300 text-sm mt-5" role="alert">
               {submitError}{' '}

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
+import Link from 'next/link';
 import { ArrowRight, Check } from 'lucide-react';
 
 const PROJECT_TYPES = [
@@ -213,6 +214,12 @@ export default function LeadCaptureForm() {
 
       <p className="text-[11px] text-[oklch(48%_0.01_230)] leading-relaxed">
         No mailing list. No obligation. A technical lead reviews every request.
+      </p>
+      <p className="text-xs text-[oklch(65%_0.01_230)] leading-relaxed">
+        Learn how we handle your information in our{' '}
+        <Link href="/privacy" className="underline underline-offset-4 hover:text-brand-primary">
+          Privacy Policy
+        </Link>.
       </p>
     </form>
   );

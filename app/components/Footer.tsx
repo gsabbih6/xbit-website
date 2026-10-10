@@ -155,10 +155,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-14 pt-6 border-t border-[oklch(16%_0.01_230)]">
+        <div className="mt-14 pt-6 border-t border-[oklch(16%_0.01_230)] flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[oklch(35%_0.01_230)] text-xs">
             Xbit Innovations LLC &middot; Built with purpose in the Natural State.
           </p>
+          <Link
+            href="/privacy"
+            className="text-sm text-[oklch(65%_0.01_230)] hover:text-brand-primary transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-primary"
+          >
+            Privacy Policy
+          </Link>
         </div>
       </div>
     </footer>
